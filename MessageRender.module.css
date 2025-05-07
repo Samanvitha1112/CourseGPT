@@ -1,0 +1,119 @@
+.message-container {
+  margin-top: 20px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f7f7f7, #e0e0e0);
+  border-radius: 12px;
+  overflow-y: auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px); /* Adds a frosted-glass effect */
+  transition: all 0.3s ease;
+}
+
+.message-container:hover {
+  transform: scale(1.02);
+}
+
+.loading-indicator {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff;
+  font-weight: bold;
+  animation: bounce 1s infinite;
+}
+
+/* Add a bouncing animation for the loading indicator */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.message-row {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.message-row.user {
+  justify-content: flex-end; /* User message aligned to the right */
+}
+
+.message-row.response {
+  justify-content: flex-start; /* Response message aligned to the left */
+}
+
+.user-message {
+  background: radial-gradient(circle, #d1ecf1, #a1d7e2);
+  padding: 15px;
+  border-radius: 12px;
+  text-align: right;
+  max-width: 80%;
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  position: relative;
+  margin-left: auto; /* Ensures it aligns to the right */
+}
+
+.user-message:hover {
+  transform: translateX(5px);
+  cursor: pointer;
+}
+
+.response-message {
+  background: linear-gradient(45deg, #f8d7da, #e2e3e5);
+  padding: 15px;
+  border-radius: 12px;
+  text-align: left;
+  max-width: 80%;
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  position: relative;
+  margin-right: auto; /* Ensures it aligns to the left */
+}
+
+.response-message:hover {
+  transform: translateX(-5px);
+  cursor: pointer;
+}
+
+.user-message::before, .response-message::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #007bff;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.user-message::before {
+  right: -15px;
+}
+
+.response-message::before {
+  left: -15px;
+}
+
+/* Scrollbar styling */
+.message-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.message-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.message-container::-webkit-scrollbar-thumb:hover {
+  background-color: #007bff;
+}

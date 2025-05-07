@@ -1,0 +1,104 @@
+/* SidePageRender.css */
+
+.sidepage-container {
+    display: flex;
+    flex-direction: column;
+    /* height: 100vh; */
+     /* Full height of the screen */
+    /* background: linear-gradient(135deg, #6fa2ef1c, #cfe2f3);  */
+    background: linear-gradient(#cfe2f3);
+    /* Blue to white gradient background */
+    color: #333; /* Dark text color for contrast */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.sidepage-container-header {
+    font-size: 20px;
+
+}
+
+.tabs-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Take up remaining space */
+    max-height: 80%;
+     /* Allow space for the "Show More" button */
+    overflow: hidden; /* Prevent any overflow scrollbar */
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9); /* Light white background for tabs */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for container */
+}
+
+/* Prevent horizontal and vertical scrollbar for tabs */
+.tab-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Add spacing between tabs */
+    overflow: hidden;
+    padding: 0;
+}
+
+/* Style for each tab item */
+.tab-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border: 2px solid #6fa2ef38; /* Blue border for tabs */
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for tabs */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.tab-item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Shadow on hover for emphasis */
+    background-color: rgba(255, 255, 255, 1); /* Full white background on hover */
+}
+
+.delete-btn {
+    color: #ff4d4d; /* Soft red delete icon for visibility */
+    transition: color 0.2s ease; /* Smooth transition for color change */
+}
+
+.delete-btn:hover {
+    color: #ff6347; /* Slightly brighter red on hover */
+}
+
+.show-more-wrapper {
+    width: 100%; /* Full width of the parent container */
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    position: sticky;
+    bottom: 0;
+    background-color: rgb(184, 34, 34); /* Semi-transparent background */
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.show-more-btn {
+    width: 100%;
+    padding: 12px;
+    /* background: linear-gradient(135deg, #0066ff, #cfe2f3);  */
+    background: linear-gradient( #0066ff); 
+    /* Blue to white gradient */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.show-more-btn:hover {
+    /* background: linear-gradient(135deg, #cfe2f3, #6fa3ef);  */
+    background: linear-gradient( #0066ff94); 
+    /* Reverse gradient on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+
